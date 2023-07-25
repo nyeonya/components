@@ -4,11 +4,16 @@
 
 - Custom hook 을 이용한 useTabs 컴포넌트 작업
 
+2023 / 07 / 25
+
+- framer-motion 라이브러리 연습
 <!--
-```bash
+
+````bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
 ``` -->
+````

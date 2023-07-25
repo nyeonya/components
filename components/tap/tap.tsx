@@ -3,17 +3,20 @@
 import useTabs from "@/hooks/useTabs";
 import clsx from "clsx";
 
-const contents = [
-  { tab: "tapContent1", content: "AAAAAAA" },
-  { tab: "tapContent2", content: "BBBBBBB" },
-];
+interface Contents {
+  tab: string;
+  content: any;
+}
 
-const Tap = () => {
+interface Props {
+  contents: Contents[];
+}
+const Tap = ({ contents }: Props) => {
   const { currentItem, changeItem } = useTabs(0, contents) as any;
 
   return (
     <div>
-      <ul className="border-t border-gray-300 mt-10 flex">
+      <ul className="border-t border-gray-300  flex">
         {contents.map(({ tab }, idx) => (
           <div
             onClick={() => changeItem(idx)}
@@ -25,7 +28,7 @@ const Tap = () => {
           </div>
         ))}
       </ul>
-      {/* <div>{currentItem.content}</div> */}
+      <div>{currentItem.content}</div>
     </div>
   );
 };

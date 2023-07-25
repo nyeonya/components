@@ -1,5 +1,3 @@
-import Tap from "@/components/taps/tap";
-
 export default function Home() {
-  return <Tap />;
+  return <div>테스트용페이지</div>;
 }
