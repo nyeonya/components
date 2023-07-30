@@ -9,6 +9,10 @@ const category = [
     title: "framer",
     path: "/framer",
   },
+  {
+    title: "hook-form",
+    path: "/react-hook-form",
+  },
 ];
 
 const Navbar = () => {

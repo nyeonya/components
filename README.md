@@ -11,13 +11,7 @@
 2023 / 07 / 26
 
 - framer-motion 라이브러리 연습 & Tab 컴포넌트에 모션 적용
-<!--
 
-````bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-``` -->
-````
+2023 / 07 / 30
+
+- 버튼 컴포넌트 & 다양한 폼을 한번에 관리하기 쉽게 하기위해 react-hook-form 라이브러리를 이용하여 컴포넌트화
