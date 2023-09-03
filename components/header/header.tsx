@@ -13,6 +13,10 @@ const category = [
     title: "hook-form",
     path: "/react-hook-form",
   },
+  {
+    title: "table",
+    path: "/table",
+  },
 ];
 
 const Navbar = () => {

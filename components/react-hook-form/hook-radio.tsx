@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import { Controller } from "react-hook-form";
 
 const HookFormRadio = ({
-  //APi요청시 보내는 필드명값
+  //APi요청시 request 보내는 필드명값
   paramsName,
   name,
   control,
