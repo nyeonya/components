@@ -1,10 +1,10 @@
 "use client";
 
-import FormCheckboxes from "@/components/NewForm/checkbox";
-import FormInput from "@/components/NewForm/input";
-import FormRadio from "@/components/NewForm/radio";
-import FormSelect from "@/components/NewForm/select";
-import FormUpload from "@/components/NewForm/upload";
+import FormCheckboxes from "@/components/Form/Checkbox/Checkbox";
+import FormUpload from "@/components/Form/FileUpload/FileUpload";
+import FormInput from "@/components/Form/Input/Input";
+import FormRadio from "@/components/Form/Radio/Radio";
+import FormSelect from "@/components/Form/Select/Select";
 import { FormProvider, useForm } from "react-hook-form";
 
 const Yoon = ({ data = "" }) => {
@@ -13,8 +13,8 @@ const Yoon = ({ data = "" }) => {
     defaultValues: {
       input1: "",
       input2: "",
-      radio: "",
-      checkbox: [],
+      radio: "1",
+      checkbox: ["d", "cc"],
       upload: [],
       select: "하나",
     },
@@ -93,8 +93,8 @@ const Yoon = ({ data = "" }) => {
             name="radio"
             rules={{ required: "라디오박스 필수 선택입니다." }}
             items={[
-              { label: "라디오버튼1", value: 1 },
-              { label: "라디오버튼2", value: 2 },
+              { label: "ddddd", value: "1" },
+              { label: "aaa", value: "2" },
             ]}
           />
           <FormCheckboxes
@@ -115,7 +115,7 @@ const Yoon = ({ data = "" }) => {
           />
           <button
             type="submit"
-            className="p-5 bg-warning1 rounded-md text-white font-bold"
+            className="p-5 bg-rose-300 rounded-md text-white font-bold"
           >
             CLICK
           </button>

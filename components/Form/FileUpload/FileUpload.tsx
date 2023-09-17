@@ -1,6 +1,6 @@
 import { useFieldArray, useFormContext } from "react-hook-form";
-import Box from "../Box/box";
-import FileImage from "../Image/image";
+import Box from "../../Layout/Box/box";
+import FileImage from "../../Image/image";
 
 export interface IUploadFile {
   /**useForm 필드값 관리용 이름 & request요청 시 필드 이름*/
@@ -76,7 +76,7 @@ const FormUpload = ({ name, type = "image", rules, height }: IUploadFile) => {
         {fileArray?.length === 0 && <span>선택된 파일 없음</span>}
       </div>
       {hasError && (
-        <span className="text-warning1">- {errorMessages as string}</span>
+        <span className="text-rose-300">- {errorMessages as string}</span>
       )}
     </>
   );

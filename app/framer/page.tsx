@@ -1,4 +1,4 @@
-import Tap from "@/components/tap/tap";
+import Tap from "@/components/Tap/tap";
 import Framer from "./components/framer1";
 import Framer2 from "./components/framer2";
 import Framer3 from "./components/framer3";

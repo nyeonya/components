@@ -1,6 +1,6 @@
 "use client";
 
-import Table from "@/components/table/table";
+import Table from "@/components/Table/table";
 import { useEffect, useState } from "react";
 
 const col = [

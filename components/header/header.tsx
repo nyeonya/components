@@ -11,7 +11,7 @@ const category = [
   },
   {
     title: "hook-form",
-    path: "/react-hook-form",
+    path: "/hook-form",
   },
   {
     title: "table",
