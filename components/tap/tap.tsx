@@ -21,7 +21,11 @@ const Tap = ({ contents }: Props) => {
       <ul className="border-t border-gray-300  flex gap-2">
         {contents.map(({ tab }, idx) => {
           return (
-            <motion.li onClick={() => changeItem(idx)} className="p-4">
+            <motion.li
+              onClick={() => changeItem(idx)}
+              className="p-4"
+              key={`tap_${idx}`}
+            >
               {tab}
               {currentItem.tab === tab ? (
                 <motion.div
