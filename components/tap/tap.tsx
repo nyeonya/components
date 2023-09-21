@@ -1,43 +1,37 @@
-"use client";
-
 import useTabs from "@/hooks/useTabs";
-import { motion, AnimatePresence } from "framer-motion";
-import clsx from "clsx";
+import { ReactNode } from "react";
 
-interface Contents {
-  tab: string;
-  content: any;
-}
+export type ItabItems = {
+  label: string;
+  content: string | ReactNode;
+};
+export type ITabGroup = {
+  tabItems: ItabItems[];
+};
 
-interface Props {
-  contents: Contents[];
-}
-
-const Tap = ({ contents }: Props) => {
-  const { currentItem, changeItem } = useTabs(0, contents) as any;
+export const Tap = ({ tabItems }: any) => {
+  const { currentActiveTab, changeActiveTab } = useTabs(0, tabItems) as any;
 
   return (
-    <div>
-      <ul className="border-t border-gray-300  flex gap-2">
-        {contents.map(({ tab }, idx) => {
-          return (
-            <motion.li
-              onClick={() => changeItem(idx)}
-              className="p-4"
-              key={`tap_${idx}`}
-            >
-              {tab}
-              {currentItem.tab === tab ? (
-                <motion.div
-                  layoutId="abc"
-                  className="h-2 w-full bg-black"
-                ></motion.div>
-              ) : null}
-            </motion.li>
-          );
-        })}
-      </ul>
-      <div>{currentItem.content}</div>
+    <div className="flex first:border-l-[1px] border-grayDB">
+      {tabItems?.map(({ label }: any, tabIndex: number) => {
+        const isActive = currentActiveTab?.label === label;
+        return (
+          <div
+            key={label}
+            className={`border-t-[1px] border-r-[1px] border-grayDB  w-[10.375rem] h-[2.4375rem] text-base py-[0.4375rem] text-center font-bold ${
+              isActive
+                ? "text-black bg-white border-b-0 cursor-auto"
+                : "text-gray-300 cursor-pointer"
+            }`}
+            onClick={() => {
+              changeActiveTab(tabIndex);
+            }}
+          >
+            <div>{label}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };

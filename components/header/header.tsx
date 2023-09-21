@@ -21,7 +21,7 @@ const category = [
 
 const Navbar = () => {
   return (
-    <nav className="h-10 bg-white">
+    <nav className="flex items-center h-10 bg-white gap-5 ">
       {category.map(({ title, path }) => (
         <Link href={path}>{title}</Link>
       ))}
