@@ -32,6 +32,8 @@ const options = {
 const textCenter = {
   id: "textCenter",
   beforeDatasetsDraw(chart, args, pluginOptions) {
+    console.log(chart);
+
     const { ctx, data } = chart;
     ctx.save();
     ctx.font = "bolder 16px Inter";

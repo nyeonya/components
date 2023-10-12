@@ -6,9 +6,19 @@ import BarChart2 from "@/components/Chart/RadarChart";
 
 export default function Home() {
   return (
-    <div className="m-10 w-[700px] border-t border-blue-900 relative">
-      <HorizontalBarChart />
-      <div className="absolute w-full border-b border-blue-900 top-[320px]" />
-    </div>
+    <>
+      {/* <div className="h-[500px]">
+        <HorizontalBarChart />
+      </div>
+      <div className="w-[800px]">
+        <BarChart />
+      </div>
+      <div className="w-[100px]">
+        <DoughnutChart />
+      </div>
+      <div className="w-[400px]">
+        <RadarChart />
+      </div> */}
+    </>
   );
 }

@@ -34,7 +34,6 @@ const options = {
         width: 4,
         z: 10,
       },
-
       min: -100,
       max: 100,
       ticks: {
@@ -46,7 +45,6 @@ const options = {
             return (l = `${v}%`);
           };
           return trans(v);
-          //   ticks.push({ value: -100, label: "100%", font: { size: 20 } });
         },
         beginAtZero: true,
         // font: {
@@ -55,6 +53,7 @@ const options = {
         major: {
           enabled: true,
         },
+        padding: 5,
       },
     },
     y: {
@@ -73,7 +72,6 @@ const options = {
       grid: {
         display: false,
       },
-      //   display: false,
       position: "right",
       labels: [
         "내부방향",
@@ -135,12 +133,15 @@ const data = {
 
 const HorizontalBarChart = () => {
   return (
-    <Bar
-      className="absolute top-[-10px]"
-      options={options}
-      data={data}
-      plugins={[gradient, ChartDataLabels]}
-    />
+    <div className="m-10 w-[870px] border-t border-blue-900 relative">
+      <Bar
+        className="absolute top-[-10px]"
+        options={options}
+        data={data}
+        plugins={[gradient, ChartDataLabels]}
+      />
+      <div className="absolute w-full border-b border-blue-900 top-[400px]" />
+    </div>
   );
 };
 
